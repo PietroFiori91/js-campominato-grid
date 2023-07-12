@@ -84,12 +84,10 @@ function generaGriglia() {
     });
     grigliaContainer.appendChild(cella);
 
-    // NON CAPISCO QUESTA CODNIZIONE
     if (i % cellsPerRow === 0) {
       const lineBreak = document.createElement("br");
       grigliaContainer.appendChild(lineBreak);
     }
-    // NON CAPISCO QUESTA CODNIZIONE
   }
 }
 
