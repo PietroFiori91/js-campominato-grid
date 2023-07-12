@@ -64,25 +64,41 @@ document
   .getElementById("generaGriglia")
   .addEventListener("click", generaGriglia);
 
+//PRIMA FUNZIONE PER GENERARE GRIGLIA
+
 function generaGriglia() {
   const griglia = document.getElementById("griglia");
   griglia.innerHTML = "";
 
+  //COSTANTI NUMERO CELLE E MAX NUM. PER RIGA
+
   const numCells = 100;
   const cellsPerRow = 10;
+
+  //CREO ELEMENT GRIGLIA
 
   const grigliaContainer = document.createElement("div");
   grigliaContainer.classList.add("griglia-container");
   griglia.appendChild(grigliaContainer);
 
+  //CICLO FOR + CREO ELEMENT CELLA
+
   for (let i = 1; i <= numCells; i++) {
     const cella = document.createElement("div");
     cella.classList.add("cella");
     cella.textContent = i;
+
+    //ADD EVENT LISTENER CLICK - COLORO CELLA
+
     cella.addEventListener("click", function () {
       coloraCella(cella);
     });
+
+    //INSERISCO CELLA IN CONTAINER
+
     grigliaContainer.appendChild(cella);
+
+    //LINE BREAK PER MANDARE A CAPO OGNI 10 CELLE
 
     if (i % cellsPerRow === 0) {
       const lineBreak = document.createElement("br");
@@ -90,6 +106,8 @@ function generaGriglia() {
     }
   }
 }
+
+//FUNZIONE COLORA CELLA
 
 function coloraCella(cella) {
   cella.style.backgroundColor = "lightblue";
