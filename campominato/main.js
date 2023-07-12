@@ -95,5 +95,4 @@ function generaGriglia() {
 
 function coloraCella(cella) {
   cella.style.backgroundColor = "lightblue";
-  console.log("Cella cliccata: " + cella.textContent);
 }

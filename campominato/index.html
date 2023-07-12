@@ -41,67 +41,31 @@
 
     <title>Document</title>
 
-    <!-- _____________________________________________________________ -->
 
-
-    <!-- <title>Griglia di Gioco</title>
+    <title>Griglia di Gioco</title>
     <style>
-        .grid-container {
-            display: flex;
+        .cella {
+            width: 40px;
+            height: 40px;
             border: 1px solid black;
-            flex-wrap: wrap;
-            aspect-ratio: 1/1;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
         }
 
-        .grid-square {
-            aspect-ratio: 1/1;
-            border: 1px solid green;
-            display: flex;
-            align-items: center;
-            justify-content: center
-        }
-    </style>
-</head>
-
-<body>
-    <select name="squareCounts" id="">
-        <option value="36">36</option>
-        <option value="64">64</option>
-        <option value="81">81</option>
-    </select>
-
-    <button class="btn btn-primary" id="btn-start">Avvia</button>
-
-    <div class="grid-container"></div>
-
-    <script src="./main.js"></script>
-</body> -->
-
-    <!-- _____________________________________________________________ -->
-
-    <head>
-        <title>Griglia di Gioco</title>
-        <style>
-            .cella {
-                width: 40px;
-                height: 40px;
-                border: 1px solid black;
-                display: inline-block;
-                text-align: center;
-                cursor: pointer;
-            }
-
-            /* .griglia-container {
+        /* .griglia-container {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
             } */
-        </style>
-    </head>
+    </style>
+</head>
 
 <body>
-    <button id="generaGriglia">Genera Griglia</button>
-    <div class="griglia-container" id="griglia"></div>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary m-5" id="generaGriglia">Genera Griglia</button>
+        <div class="griglia-container" id="griglia"></div>
+    </div>
 
     <script src="main.js"></script>
 </body>
